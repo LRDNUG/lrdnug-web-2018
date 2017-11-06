@@ -5,8 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var meetup = require('meetup-api');
 var index = require('./routes/index');
 var users = require('./routes/users');
+var events = require('./events.json');
 
 var app = express();
 
@@ -31,6 +33,16 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
+
+app.get('/events', function(req, res) {
+  var events = res.results;
+  return "return";
+});
+
+// meetup.getEvents({'Little-Rock-NET-User-Group' : }, function(error,response) {
+//   var d = new Date(response.results[0].time + 3600000);
+//   console.log(d);
+// });
 
 // error handler
 app.use(function(err, req, res, next) {
