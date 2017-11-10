@@ -13,10 +13,15 @@ router.get('/', function(req, res, next) {
   meetup.getEvents({'group_id' : '19887327', 'status' : 'past'}, function(err, events) {
     // myEvents = events;
 		// console.log(myEvents);
-		var myEvents = JSON.parse(events);
+		//var myEvents = JSON.parse(events);
     // var output = events.getElementById('id');
     // eventstest.innerHTML = events;
-		res.render('index', {title: 'LRDNUG', events: 'myEvents'});
+
+		//var jsonObject = JSON.parse(events);
+
+		console.log(events);
+
+		res.render('index', { title: 'LRDNUG', events: events });
   });
 
   // res.render('index', { title: 'LRDNUG', events : myEvents});

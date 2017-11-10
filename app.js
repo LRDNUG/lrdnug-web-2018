@@ -34,10 +34,10 @@ app.use(function(req, res, next) {
   next(err);
 });
 
-app.get('/events', function(req, res) {
-  var events = res.results;
-  return "return";
-});
+// app.get('/events', function(req, res) {
+//   var events = res.results;
+//   return "return";
+// });
 
 // meetup.getEvents({'Little-Rock-NET-User-Group' : }, function(error,response) {
 //   var d = new Date(response.results[0].time + 3600000);
