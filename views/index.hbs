@@ -3,7 +3,10 @@
 
 List stuff: <br/><br/>
 {{#each events.results}}
-  <p>{{@index}}. {{this.description}}</p>
+  <h2>{{this.name}}</h2>
+  <h3>{{this.local_time}} at {{this.local_time}}</h3>
+  {{{this.description}}}
 {{else}}
   <p class="empty">No content</p>
 {{/each}}
+  <a href="archive.hbs">Archive</a>

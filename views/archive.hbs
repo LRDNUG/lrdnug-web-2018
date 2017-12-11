@@ -1,0 +1,9 @@
+<h1>Archive</h1>
+
+{{#each events.results}}
+  <h2>{{this.name}}</h2>
+  <h3>{{this.local_date}} at {{this.local_time}}</h3>
+  {{{this.description}}}
+{{else}}
+  <p class="empty">No content</p>
+{{/each}}
