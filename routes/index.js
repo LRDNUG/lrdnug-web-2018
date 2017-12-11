@@ -3,9 +3,10 @@ var router = express.Router();
 var meetup = require('meetup-api')({
 	key: 'f433f48e23582178527a3f2475e62'
 });
-
+var hbs = require('hbs');
 var app = express();
-
+var helpers = require('handlebars-helpers')();
+hbs.registerHelper('dateFormat', require('handlebars-dateformat'));
 /* GET home page. */
 router.get('/', function(req, res, next) {
   // https://api.meetup.com/topics.json?page=1
