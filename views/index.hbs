@@ -4,7 +4,7 @@
 List stuff: <br/><br/>
 {{#each events.results}}
   <h2>{{this.name}}</h2>
-  <h3>{{this.local_time}} at {{this.local_time}}</h3>
+  <h3>{{moment this.time format="YYYY-MM-DD"}}</h3>
   {{{this.description}}}
 {{else}}
   <p class="empty">No content</p>

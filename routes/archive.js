@@ -10,7 +10,7 @@ var app = express();
 router.get('/', function(req, res, next) {
   // https://api.meetup.com/topics.json?page=1
 // var myEvents = [];
-  meetup.getEvents({'group_id' : '19887327', 'status' : 'past', 'desc' : 'true'}, function(err, events) {
+  meetup.getEvents({'group_id' : '19887327', 'status' : 'past,upcoming', 'desc' : 'true'}, function(err, events) {
     // myEvents = events;
 		// console.log(myEvents);
 		//var myEvents = JSON.parse(events);
